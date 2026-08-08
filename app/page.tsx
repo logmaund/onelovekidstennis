@@ -1,17 +1,10 @@
-const sessionDates = [
-  "June 30",
-  "July 2",
-  "July 7",
-  "July 9",
-  "July 14",
-  "July 16",
-  "July 21",
-  "July 23",
-  "July 28",
-  "July 30",
-  "August 4",
-  "August 6",
+const calendarMonths = [
+  { name: "June", leadingDays: 0, days: 30, sessions: [30] },
+  { name: "July", leadingDays: 2, days: 31, sessions: [2, 7, 9, 14, 16, 21, 23, 28, 30] },
+  { name: "August", leadingDays: 5, days: 31, sessions: [4, 6] },
 ];
+
+const weekdays = ["M", "T", "W", "T", "F", "S", "S"];
 
 export default function Home() {
   return (
@@ -118,14 +111,31 @@ export default function Home() {
         </div>
 
         <div className="schedule-card">
-          <div>
-            <p className="eyebrow">Placeholder schedule</p>
+          <div className="schedule-copy">
+            <p className="eyebrow">Placeholder schedule · 2026</p>
             <h3>Six weeks. Twelve chances to play.</h3>
-            <p>Private hourly lessons and hitting sessions are also available.</p>
+            <p>Highlighted dates include Pee Wee from 4:00–5:00 PM and Juniors from 5:00–6:30 PM.</p>
+            <a className="button calendar-download" href="./onelove-2026-clinic-schedule.ics" download>
+              Add dates to my calendar
+            </a>
+            <small>Works with Apple Calendar, Google Calendar, and Outlook.</small>
           </div>
-          <ol className="date-list">
-            {sessionDates.map((date, index) => <li key={date}><span>{String(index + 1).padStart(2, "0")}</span>{date}</li>)}
-          </ol>
+          <div className="calendar-widget" aria-label="2026 clinic calendar">
+            {calendarMonths.map((month) => (
+              <section className="mini-calendar" key={month.name} aria-label={`${month.name} 2026`}>
+                <h4>{month.name}</h4>
+                <div className="calendar-grid">
+                  {weekdays.map((day, index) => <b key={`${month.name}-${day}-${index}`}>{day}</b>)}
+                  {Array.from({ length: month.leadingDays }, (_, index) => <span className="empty-day" key={`empty-${index}`} />)}
+                  {Array.from({ length: month.days }, (_, index) => {
+                    const day = index + 1;
+                    const isSession = month.sessions.includes(day);
+                    return <span className={isSession ? "session-day" : ""} key={day} aria-label={isSession ? `${month.name} ${day}, clinic day` : undefined}>{day}</span>;
+                  })}
+                </div>
+              </section>
+            ))}
+          </div>
         </div>
       </section>
 

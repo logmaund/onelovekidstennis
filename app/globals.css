@@ -148,6 +148,8 @@ h1 em { color: var(--green); font-weight: 500; }
 .trust-strip span { color: #cad6d2; font-size: 13px; }
 
 .section { padding: 110px clamp(24px, 6vw, 92px); }
+.programs { padding-bottom: 80px; padding-top: 80px; }
+.programs .section-heading { margin-bottom: 28px; }
 .section-heading { align-items: end; display: grid; gap: 50px; grid-template-columns: 1.4fr 0.6fr; margin-bottom: 45px; }
 h2 { font-size: clamp(43px, 5.5vw, 76px); letter-spacing: -3px; margin-bottom: 0; }
 .section-heading > p { color: #536a64; margin: 0 0 8px; }
@@ -155,24 +157,32 @@ h2 { font-size: clamp(43px, 5.5vw, 76px); letter-spacing: -3px; margin-bottom: 0
 .placeholder-notice strong { flex: 0 0 auto; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
 .placeholder-notice span { font-size: 13px; }
 .program-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
-.program-card { border-radius: 6px; min-height: 480px; overflow: hidden; padding: clamp(30px, 4vw, 58px); position: relative; }
+.program-card { border-radius: 6px; min-height: 350px; overflow: hidden; padding: clamp(26px, 3vw, 40px); position: relative; }
 .pee-wee { background: var(--lime); }
 .junior { background: var(--green); color: white; }
-.card-number { font-family: Georgia, serif; font-size: 19px; margin-bottom: 45px; opacity: .65; }
+.card-number { font-family: Georgia, serif; font-size: 16px; margin-bottom: 22px; opacity: .65; }
 .card-label { font-size: 11px; font-weight: 900; letter-spacing: 1.8px; text-transform: uppercase; }
-.program-card h3 { font-size: clamp(38px, 4vw, 59px); margin-bottom: 10px; }
+.program-card h3 { font-size: clamp(34px, 3.4vw, 50px); margin-bottom: 8px; }
 .program-time { font-size: 17px; font-weight: 800; }
 .program-card > p:not(.card-label):not(.program-time) { max-width: 510px; }
-.program-card dl { bottom: 40px; display: flex; gap: 50px; margin: 32px 0 0; position: absolute; }
+.program-card dl { display: flex; gap: 50px; margin: 24px 0 0; }
 .program-card dl div { display: flex; flex-direction: column; }
 .program-card dt { font-size: 11px; opacity: .72; text-transform: uppercase; }
 .program-card dd { font-family: Georgia, serif; font-size: 28px; margin: 0; }
-.schedule-card { background: white; display: grid; gap: 45px; grid-template-columns: .7fr 1.3fr; margin-top: 20px; padding: clamp(30px, 4vw, 58px); }
-.schedule-card h3 { font-size: clamp(33px, 3.5vw, 48px); }
-.schedule-card > div > p:last-child { color: #536a64; }
-.date-list { display: grid; gap: 0; grid-template-columns: repeat(3, 1fr); list-style: none; margin: 0; padding: 0; }
-.date-list li { border-bottom: 1px solid var(--line); display: flex; font-weight: 800; gap: 12px; padding: 10px; }
-.date-list span { color: var(--green); font-size: 10px; font-weight: 900; }
+.schedule-card { background: white; display: grid; gap: 36px; grid-template-columns: .65fr 1.35fr; margin-top: 20px; padding: clamp(26px, 3vw, 42px); }
+.schedule-card h3 { font-size: clamp(31px, 3vw, 43px); margin-bottom: 16px; }
+.schedule-copy > p:not(.eyebrow) { color: #536a64; }
+.calendar-download { background: var(--ink); color: white; margin-top: 10px; }
+.calendar-download:hover { background: var(--green); }
+.schedule-copy small { color: #71827d; display: block; font-size: 11px; margin-top: 10px; }
+.calendar-widget { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+.mini-calendar { border: 1px solid var(--line); padding: 14px; }
+.mini-calendar h4 { font-family: Georgia, serif; font-size: 19px; margin: 0 0 10px; }
+.calendar-grid { display: grid; gap: 4px; grid-template-columns: repeat(7, 1fr); }
+.calendar-grid b, .calendar-grid span { align-items: center; aspect-ratio: 1; display: flex; font-size: 10px; justify-content: center; }
+.calendar-grid b { color: #71827d; font-size: 8px; }
+.calendar-grid .session-day { background: var(--lime); border-radius: 50%; color: var(--ink); font-weight: 900; }
+.empty-day { visibility: hidden; }
 
 .coach { background: white; display: grid; gap: clamp(50px, 8vw, 130px); grid-template-columns: .82fr 1.18fr; }
 .coach-visual { align-items: center; aspect-ratio: .84; background: var(--orange); color: white; display: flex; justify-content: center; overflow: hidden; position: relative; }
@@ -214,6 +224,7 @@ footer p:last-child { text-align: right; }
   .court-card { justify-self: center; width: min(58vw, 370px); }
   .trust-strip { flex-direction: column; gap: 3px; }
   .section-heading, .schedule-card, .coach { grid-template-columns: 1fr; }
+  .calendar-widget { max-width: 680px; }
   .coach-visual { max-width: 580px; }
   .contact-grid { grid-template-columns: 1fr; }
   footer { grid-template-columns: 1fr; }
@@ -230,9 +241,10 @@ footer p:last-child { text-align: right; }
   .court-card { padding-left: 30px; width: min(74vw, 310px); }
   .court-motto { font-size: clamp(25px, 8vw, 36px); left: 0; }
   .program-grid { grid-template-columns: 1fr; }
-  .program-card { min-height: 500px; }
+  .program-card { min-height: 0; }
   .schedule-card { padding: 28px 20px; }
-  .date-list { grid-template-columns: 1fr 1fr; }
+  .calendar-widget { grid-template-columns: 1fr; }
+  .mini-calendar { max-width: 310px; width: 100%; }
   .placeholder-notice { align-items: flex-start; flex-direction: column; gap: 2px; }
   .register-band { align-items: flex-start; flex-direction: column; }
   .button-light { width: 100%; }
