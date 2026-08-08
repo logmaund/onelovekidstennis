@@ -52,13 +52,19 @@ export default function Home() {
         </div>
         <div className="court-card" aria-label="Decorative tennis court illustration">
           <div className="court">
-            <span className="court-line court-line-one" />
-            <span className="court-line court-line-two" />
-            <span className="court-line court-line-three" />
+            <span className="court-boundary" />
+            <span className="court-singles singles-left" />
+            <span className="court-singles singles-right" />
+            <span className="court-service service-top" />
+            <span className="court-service service-bottom" />
+            <span className="court-center" />
+            <span className="court-net" />
+            <span className="center-mark mark-top" />
+            <span className="center-mark mark-bottom" />
             <span className="tennis-ball ball-one" />
             <span className="tennis-ball ball-two" />
           </div>
-          <p><span>Play.</span><span>Learn.</span><span>Belong.</span></p>
+          <p className="court-motto"><span>Play</span><i aria-hidden="true" /><span>Learn</span><i aria-hidden="true" /><span>Belong</span></p>
         </div>
       </section>
 
