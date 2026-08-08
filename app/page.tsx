@@ -28,7 +28,7 @@ export default function Home() {
           <a href="#programs">Programs</a>
           <a href="#coach">Meet Coach Matt</a>
           <a href="#contact">Contact</a>
-          <a className="nav-cta" href="/2026-registration-form.pdf">Registration form</a>
+          <a className="nav-cta" href="./2026-registration-form.pdf">Registration form</a>
         </nav>
       </header>
 
@@ -41,7 +41,7 @@ export default function Home() {
             confidence, and friendships at the Historic Cape May Tennis Club.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/2026-registration-form.pdf">View registration form</a>
+            <a className="button button-primary" href="./2026-registration-form.pdf">View registration form</a>
             <a className="button button-secondary" href="#programs">Explore programs</a>
           </div>
           <ul className="quick-facts" aria-label="Program highlights">
@@ -152,7 +152,7 @@ export default function Home() {
           <h2>Reserve your player&apos;s spot</h2>
           <p>Download the temporary 2026 form, then print and mail it to Cape May Tennis Club.</p>
         </div>
-        <a className="button button-light" href="/2026-registration-form.pdf">Download registration form</a>
+        <a className="button button-light" href="./2026-registration-form.pdf">Download registration form</a>
       </section>
 
       <section className="section contact" id="contact">
