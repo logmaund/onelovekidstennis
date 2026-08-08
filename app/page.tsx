@@ -64,7 +64,7 @@ export default function Home() {
             <span className="tennis-ball ball-one" />
             <span className="tennis-ball ball-two" />
           </div>
-          <p className="court-motto"><span>Play</span><i aria-hidden="true" /><span>Learn</span><i aria-hidden="true" /><span>Belong</span></p>
+          <p className="court-motto"><span>Play.</span><span>Learn.</span><span>Belong.</span></p>
         </div>
       </section>
 
