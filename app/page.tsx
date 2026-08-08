@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="One Love Kids Tennis home">
-          <span className="brand-mark" aria-hidden="true">1</span>
+          <img className="brand-mark" src="./original-one-love-logo.jpg" alt="" aria-hidden="true" width="48" height="48" />
           <span>
             <strong>One Love</strong>
             <small>Kids Tennis</small>
@@ -185,7 +185,7 @@ export default function Home() {
 
       <footer>
         <a className="brand brand-footer" href="#top">
-          <span className="brand-mark" aria-hidden="true">1</span>
+          <img className="brand-mark" src="./original-one-love-logo.jpg" alt="" aria-hidden="true" width="48" height="48" />
           <span><strong>One Love</strong><small>Kids Tennis</small></span>
         </a>
         <p>Summer youth tennis at the Historic Cape May Tennis Club.</p>
