@@ -139,6 +139,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="weather-alerts" id="weather-alerts">
+        <div className="weather-copy">
+          <p className="eyebrow">Weather alerts · Coming soon</p>
+          <h2>Plans change.<br /><em>Stay in the loop.</em></h2>
+          <p>
+            We&apos;re setting up free Remind text alerts so families can receive
+            timely updates when weather affects a clinic.
+          </p>
+          <ul>
+            <li>Rain delays and cancellations</li>
+            <li>Schedule or court changes</li>
+            <li>Quick reminders before play</li>
+          </ul>
+        </div>
+        <aside className="remind-placeholder" aria-label="Remind alerts coming soon">
+          <span className="remind-label">One Love Weather Alerts</span>
+          <p className="remind-status">Remind code<br />coming soon</p>
+          <p>Once it&apos;s ready, you&apos;ll be able to join here or text the class code to <strong>81010</strong>.</p>
+          <span className="setup-pill">Setup in progress</span>
+        </aside>
+      </section>
+
       <section className="section coach" id="coach">
         <div className="coach-visual" aria-hidden="true">
           <span className="big-one">1</span>
